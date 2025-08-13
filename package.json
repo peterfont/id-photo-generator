@@ -1,0 +1,86 @@
+{
+  "name": "id-photo-generator",
+  "version": "1.0.0",
+  "description": "一个功能强大的证件照生成工具，支持多种证件照规格，提供在线编辑、背景替换、尺寸调整等功能",
+  "keywords": [
+    "id-photo",
+    "photo-editor",
+    "background-removal",
+    "react",
+    "ionic",
+    "nestjs",
+    "typescript"
+  ],
+  "author": "ID Photo Generator Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterfont/id-photo-generator.git"
+  },
+  "homepage": "https://github.com/peterfont/id-photo-generator#readme",
+  "bugs": {
+    "url": "https://github.com/peterfont/id-photo-generator/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev:all": "concurrently \"pnpm run dev:web\" \"pnpm run dev:mobile\" \"pnpm run dev:server\"",
+    "dev:web": "cd web && pnpm run dev",
+    "dev:mobile": "cd mobile && pnpm run dev",
+    "dev:server": "cd server && pnpm run start:dev",
+    "build:all": "pnpm run build:web && pnpm run build:mobile && pnpm run build:server && pnpm run build:editor",
+    "build:web": "cd web && pnpm run build",
+    "build:mobile": "cd mobile && pnpm run build",
+    "build:server": "cd server && pnpm run build",
+    "build:editor": "cd react-image-editor && pnpm run build",
+    "test:all": "pnpm run test:web && pnpm run test:mobile && pnpm run test:server && pnpm run test:editor",
+    "test:web": "cd web && pnpm run test",
+    "test:mobile": "cd mobile && pnpm run test",
+    "test:server": "cd server && pnpm run test",
+    "test:editor": "cd react-image-editor && pnpm run test",
+    "lint:all": "pnpm run lint:web && pnpm run lint:mobile && pnpm run lint:server && pnpm run lint:editor",
+    "lint:web": "cd web && pnpm run lint",
+    "lint:mobile": "cd mobile && pnpm run lint",
+    "lint:server": "cd server && pnpm run lint",
+    "lint:editor": "cd react-image-editor && pnpm run lint",
+    "format:all": "pnpm run format:web && pnpm run format:mobile && pnpm run format:server && pnpm run format:editor",
+    "format:web": "cd web && pnpm run format",
+    "format:mobile": "cd mobile && pnpm run format",
+    "format:server": "cd server && pnpm run format",
+    "format:editor": "cd react-image-editor && pnpm run format",
+    "clean:all": "pnpm run clean:web && pnpm run clean:mobile && pnpm run clean:server && pnpm run clean:editor",
+    "clean:web": "cd web && pnpm run clean",
+    "clean:mobile": "cd mobile && pnpm run clean",
+    "clean:server": "cd server && pnpm run clean",
+    "clean:editor": "cd react-image-editor && pnpm run clean",
+    "install:all": "pnpm install && cd web && pnpm install && cd ../mobile && pnpm install && cd ../server && pnpm install && cd ../react-image-editor && pnpm install",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
+  },
+  "workspaces": [
+    "web",
+    "mobile",
+    "server",
+    "react-image-editor"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+} 
