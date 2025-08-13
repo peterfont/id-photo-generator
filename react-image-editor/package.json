@@ -1,0 +1,45 @@
+{
+  "name": "react-image-editor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.2",
+    "antd": "^5.22.4",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.9",
+    "postcss": "^8.4.49",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "@eslint/js": "^9.15.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-import": "^1.13.8",
+    "css-loader": "^6.0.0",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.12.0",
+    "html-webpack-plugin": "^5.0.0",
+    "style-loader": "^3.0.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.15.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^4.0.0"
+  }
+}
